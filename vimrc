@@ -122,7 +122,7 @@ set foldmethod=indent
 set foldlevel=99
 function HeaderPython()
 call setline(1, "#!/usr/bin/env python")
-call append(1, "#-*- coding:utf8 -*-")
+call append(1, "# -*- coding:utf8 -*-")
 call append(2, "# Power by WenBin" . strftime('%Y-%m-%d %T', localtime()))
 normal G
 normal o
