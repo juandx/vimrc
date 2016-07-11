@@ -135,5 +135,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+nnoremap <silent> <F4>    :set nu!<CR>:set relativenumber!<CR>
 set number
 set relativenumber
