@@ -138,3 +138,4 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <silent> <F4>    :set nu!<CR>:set relativenumber!<CR>
 set number
 set relativenumber
+nnoremap <silent> <F5>    :set ts=4<CR>:set expandtab<CR>:%retab!<CR>:%s/^M$//g<CR>
