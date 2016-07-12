@@ -98,6 +98,7 @@ endif
 let &guicursor = &guicursor . ",a:blinkon0"
 " by wenbin
 set shiftwidth=4
+set ts=4
 set expandtab
 set autoindent
 "Paste toggle - when pasting something in, don't indent.
