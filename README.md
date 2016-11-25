@@ -8,7 +8,7 @@ wenbin's vimrc,  good for python
 1 首先是安装vendle，
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-2 然后替换这个vimrc
+2 然后替换这个vimrc,如果是mac直接在用户目录建立一个.vimrc文件
 
 3 注意看到set rtp+=~/.vim/bundle/Vundle.vim ，把~换成自己的home目录，比如我的/home/wenbin/
 
