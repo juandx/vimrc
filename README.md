@@ -37,7 +37,7 @@ ctrl+p是查找文件，esc可以退出
 
 molokai这个配色我很喜欢
 
-:nu,  :nonu 是切换行号出现和消失
+:set nu,  :set nonu 是切换行号出现和消失
 
 先用v选择多行
 
