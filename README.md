@@ -6,6 +6,7 @@
   ubuntu需要升级到最新vim
   sudo add-apt-repository ppa:jonathonf/vim
   sudo apt-get update && sudo apt-get upgrade
+  sudo apt-get install vim
 ```
 
 2 然后替换这个vimrc,如果是mac直接在用户目录建立一个.vimrc文件
