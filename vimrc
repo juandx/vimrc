@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -144,6 +145,9 @@ nnoremap <silent> <F4>    :set nu!<CR>:set relativenumber!<CR>
 set number
 set relativenumber
 nnoremap <silent> <F5>    :set ts=4<CR>:set expandtab<CR>:%retab!<CR>:%s/^M$//g<CR>
+nnoremap <silent> <F11>    :bp<CR>
+nnoremap <silent> <F12>    :bn<CR>
+
 " 用空格键来开关折叠
 
 " YouCompleteMe config
