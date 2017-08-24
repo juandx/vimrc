@@ -45,3 +45,6 @@ ga进入easyalign模式 默认向左对其，比如按照空格对其 向右对�
 ;gg   YCM 跳转到定义的函数
 
 :open file  打开新的file文件后可以用   CTRL-^  或者  :e#  返回(:e#n 返回到n个之前的文件)
+
+7 go 用法
+  安装了vim-go 非常方便， gd是跳转到定义处，相当好用，其他请看https://github.com/fatih/vim-go
