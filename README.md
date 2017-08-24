@@ -55,3 +55,10 @@ ga进入easyalign模式 默认向左对其，比如按照空格对其 向右对�
 
 7 go 用法
   安装了vim-go 非常方便， gd是跳转到定义处，相当好用，其他请看https://github.com/fatih/vim-go
+  但是，安装vim-go会有遇到几个问题，基本是包没装，而且有的包还在墙外面。。。大概要装下面几个
+```
+go get -u github.com/nsf/gocode
+go get golang.org/x/tools/cmd/goimports
+go get golang.org/x/tools/cmd/guru
+go get golang.org/x/tools/cmd/gorename
+```
