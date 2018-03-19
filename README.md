@@ -1,13 +1,19 @@
 我平时用python+vim编辑居多 所以在网上参考并使用了一些vim插件、主题、用法 希望能够分享出来并建立一个自己的vimrc
 
-1 首先是安装vendle， git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+安装最新的vim  https://www.linuxprobe.com/vim8-0-linux.html
+```
+yum install ncurses-devel
+wget https://github.com/vim/vim/archive/master.zip
+unzip master.zip
+cd vim-master
+cd src/
+./configure
+make
+sudo make install
+vim
+```
 
-```
-  ubuntu需要升级到最新vim
-  sudo add-apt-repository ppa:jonathonf/vim
-  sudo apt-get update && sudo apt-get upgrade
-  sudo apt-get install vim
-```
+1 首先是安装vendle， git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 2 然后替换这个vimrc,如果是mac直接在用户目录建立一个.vimrc文件
 
