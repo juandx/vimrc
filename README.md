@@ -1,6 +1,7 @@
 我平时用python+vim编辑居多 所以在网上参考并使用了一些vim插件、主题、用法 希望能够分享出来并建立一个自己的vimrc
 
-安装最新的vim  https://www.linuxprobe.com/vim8-0-linux.html
+安装最新的vim  https://www.linuxprobe.com/vim8-0-linux.html
+注意必须编译的时候加入允许python插入，不然后面youcompleteme的时候会报错 requires Vim compiled with Python (2.7 or 3.4+) support.
 ```
 yum install ncurses-devel
 wget https://github.com/vim/vim/archive/master.zip
