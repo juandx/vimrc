@@ -7,7 +7,7 @@ wget https://github.com/vim/vim/archive/master.zip
 unzip master.zip
 cd vim-master
 cd src/
-./configure
+./configure --enable-pythoninterp=yes
 make
 sudo make install
 vim
