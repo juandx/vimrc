@@ -10,7 +10,7 @@ cd vim-master
 cd src/
 ./configure --enable-pythoninterp=yes
 make
-sudo make install
+make install
 vim
 ```
 
@@ -24,7 +24,7 @@ vim
 
 5 对youcompleteme 安装一对底层需要的编译的东西
 
-  sudo yum install automake gcc gcc-c++ kernel-devel cmake python-devel
+  yum install automake gcc gcc-c++ kernel-devel cmake python-devel
 
   cd ~/.vim/bundle/YouCompleteMe
 
