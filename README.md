@@ -77,8 +77,13 @@ ga进入easyalign模式 默认向左对其，比如按照空格对其 向右对�
 :open file  打开新的file文件后可以用   CTRL-^  或者  :e#  返回(:e#n 返回到n个之前的文件)
 
 ```
-vimgrep 命令行：
-:vimgrep /pattern/[g][j] files ...
+
+:vim /wenbin/g pkg/**/* *.go
+表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹下所有.go文件中含有字符串wenbin的文件
+       :cw打开搜索列表  :ccl关闭搜索列表    F8 和 F9 是下一个上一个结果
+
+vim[grep] 命令行：
+:vim[grep] /pattern/[g][j] files ...
 
 g 选项：
 不加该选项时，当一行中有多个匹配项时，仅在 quickfix 中添加一行。添加该选项时，每个匹配都在 quickfix 列表中添加一项。
