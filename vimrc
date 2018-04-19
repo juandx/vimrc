@@ -145,6 +145,8 @@ nnoremap <silent> <F4>    :set nu!<CR>:set relativenumber!<CR>
 set number
 set relativenumber
 nnoremap <silent> <F5>    :set ts=4<CR>:set expandtab<CR>:%retab!<CR>:%s/^M$//g<CR>
+nnoremap <F8> :cnext<CR> 
+nnoremap <F9> :cprev<CR>
 nnoremap <silent> <F11>    :bp<CR>
 nnoremap <silent> <F12>    :bn<CR>
 
