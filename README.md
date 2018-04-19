@@ -1,3 +1,8 @@
+
+```
+如果vim意外关闭，一般会保留一个.filename.swp文件，你vim filename 的时候会提示你，一般键入r进行继续编辑上次没改完的内容，或者键入e编辑上次修改之前的内容，然后保存退出，然后再vim filename，键入d删除.filename.swp就行
+```
+
 我平时用python+vim编辑居多 所以在网上参考并使用了一些vim插件、主题、用法 希望能够分享出来并建立一个自己的vimrc
 
 安装最新的vim  https://www.linuxprobe.com/vim8-0-linux.html
