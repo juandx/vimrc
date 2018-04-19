@@ -106,8 +106,27 @@ j 选项：
 
 
 :vim /wenbin/g pkg/**/* *.go
-表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹下所有.go文件中含有字符串wenbin的文件
-       :cw打开搜索列表  :ccl关闭搜索列表    F8 和 F9 是下一个上一个结果
+表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹及其子目录下所有.go文件中含有字符串wenbin的文件
+
+:vim /wenbin/g pkg/**/*
+表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹及其子目录下所有文件中含有字符串wenbin的文件
+
+:vim /wenbin/g **/*
+表示 想搜索当前文件夹及其子目录下所有文件中含有字符串wenbin的文件
+
+:cw打开搜索列表  :ccl关闭搜索列表    F8 和 F9 是下一个上一个结果
+       
+在查找模式中加入\c表示大小写不敏感查找，\C表示大小写敏感查找。例如：
+/foo\c
+将会查找所有的"foo","FOO","Foo"等字符串。
+
+精确匹配查找单词
+如果你输入 "/the"，你也可能找到 "there"。要找到以 "the" 结尾的单词，可以用：
+/the\> "\>" 是一个特殊的记号，表示只匹配单词末尾。类似地，"\<" 只匹配单词的开头。
+这样，要匹配一个完整的单词 "the"，只需：/\<the\>
+
+:vim /\<Generator\>/g pkg/**/* *.go
+表示精确找到Generator这个字段，来找函数很方便
 ```
 7 go 用法
   安装了vim-go 非常方便， gd是跳转到定义处，相当好用，其他请看https://github.com/fatih/vim-go
