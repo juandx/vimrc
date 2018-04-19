@@ -52,9 +52,14 @@ F12是缓冲区上一个文件
 
 ctrl+p是查找文件，esc可以退出
 
+单词自动补全：
+CTRL+n ：当你输入第一个字母的时候，再CTRL+n，自动出现下拉菜单，单词默认选中第一个，继续CTRL+n，CTRL+p可以上下切换，或者用方向键（太慢）
+
+CTRL+p ：同上，只是默认的选中的是列表中最后一个单词
+
 molokai这个配色我很喜欢
 
-:set nu, :set nonu 是切换行号出现和消失
+:set nu, :set nonu 是切换行号出现和消失 同F4
 
 先用v选择多行
 
@@ -66,6 +71,48 @@ ga进入easyalign模式 默认向左对其，比如按照空格对其 向右对�
 
 :open file  打开新的file文件后可以用   CTRL-^  或者  :e#  返回(:e#n 返回到n个之前的文件)
 
+```
+vimgrep 命令行：
+:vimgrep /pattern/[g][j] files ...
+
+g 选项：
+不加该选项时，当一行中有多个匹配项时，仅在 quickfix 中添加一行。添加该选项时，每个匹配都在 quickfix 列表中添加一项。
+
+j 选项：
+不加该选项，查找完毕，光标将跳转到第一个匹配处。添加该选项时，查找完毕，仅更新 quickfix 列表，光标不跳转。
+
+files 参数举例：
+%
+表示在当前缓冲区文件中查找。
+
+*.cpp
+表示在当前目录中的 .cpp 文件中搜索。
+
+**/*.cpp
+表示在当前目录及子目录中 .cpp 文件中搜索。
+
+**/*.cpp **/*.h
+表示在当前目录及子目录中 .cpp、.h 文件中搜索。
+
+当前目录
+用 :pwd 命令查看当前目录。用 :cd 命名切换当前目录。
+
+Quickfix 跳转
+:cw
+打开 quickfix 列表窗口
+
+:ccl
+关闭 quickfix 列表窗口
+
+:cfirst, :cnext, :cprev, clast
+跳转到 quickfix 列表的第一项、后一项、前一项及最后项的匹配处。
+
+映射小技巧
+用 F8 及 F9 在 quickfix 列表中向后、向前跳转。
+
+:nnoremap <F8> :cnext<CR> 
+:nnoremap <F9> :cprev<CR>
+```
 7 go 用法
   安装了vim-go 非常方便， gd是跳转到定义处，相当好用，其他请看https://github.com/fatih/vim-go
   但是，安装vim-go会有遇到几个问题，基本是包没装，而且有的包还在墙外面。。。大概要装下面几个
