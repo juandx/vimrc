@@ -47,6 +47,9 @@ F4是切换行号显示(行号使用相对+绝对行号)
 
 F5是格式化,把tab改为space，删除windows末尾^M
 
+
+F8 和 F9 是vimgrep搜索的下一个和上一个结果
+
 F10是缓冲区显示
 
 F11是缓冲区下一个文件
@@ -76,14 +79,14 @@ ga进入easyalign模式 默认向左对其，比如按照空格对其 向右对�
 
 :open file  打开新的file文件后可以用   CTRL-^  或者  :e#  返回(:e#n 返回到n个之前的文件)
 
-```
+:cw  打开vimgrep搜索结果
+:ccl 关闭vimgrep搜索结果
 
-:vim /wenbin/g pkg/**/* *.go
-表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹下所有.go文件中含有字符串wenbin的文件
-       :cw打开搜索列表  :ccl关闭搜索列表    F8 和 F9 是下一个上一个结果
+```
 
 vim[grep] 命令行：
 :vim[grep] /pattern/[g][j] files ...
+
 
 g 选项：
 不加该选项时，当一行中有多个匹配项时，仅在 quickfix 中添加一行。添加该选项时，每个匹配都在 quickfix 列表中添加一项。
@@ -91,37 +94,10 @@ g 选项：
 j 选项：
 不加该选项，查找完毕，光标将跳转到第一个匹配处。添加该选项时，查找完毕，仅更新 quickfix 列表，光标不跳转。
 
-files 参数举例：
-%
-表示在当前缓冲区文件中查找。
 
-*.cpp
-表示在当前目录中的 .cpp 文件中搜索。
-
-**/*.cpp
-表示在当前目录及子目录中 .cpp 文件中搜索。
-
-**/*.cpp **/*.h
-表示在当前目录及子目录中 .cpp、.h 文件中搜索。
-
-当前目录
-用 :pwd 命令查看当前目录。用 :cd 命名切换当前目录。
-
-Quickfix 跳转
-:cw
-打开 quickfix 列表窗口
-
-:ccl
-关闭 quickfix 列表窗口
-
-:cfirst, :cnext, :cprev, clast
-跳转到 quickfix 列表的第一项、后一项、前一项及最后项的匹配处。
-
-映射小技巧
-用 F8 及 F9 在 quickfix 列表中向后、向前跳转。
-
-:nnoremap <F8> :cnext<CR> 
-:nnoremap <F9> :cprev<CR>
+:vim /wenbin/g pkg/**/* *.go
+表示 比如当前目录(kubernetes)下有pkg文件下，想搜索pkg文件夹下所有.go文件中含有字符串wenbin的文件
+       :cw打开搜索列表  :ccl关闭搜索列表    F8 和 F9 是下一个上一个结果
 ```
 7 go 用法
   安装了vim-go 非常方便， gd是跳转到定义处，相当好用，其他请看https://github.com/fatih/vim-go
