@@ -18,6 +18,14 @@ Plugin 'tomasr/molokai'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'posva/vim-vue'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'sekel/vim-vue-syntastic'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -202,3 +210,46 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
+
+"othree/javascript-libraries-syntax.vim
+let g:used_javascript_libs = 'underscore,backbone'
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 0
+
+" posva/vim-vue
+au BufRead,BufNewFile *.vue set ft=javascript.jsx
+au BufRead,BufNewFile *.vue set ft=html
+
+" https://github.com/vim-syntastic/syntastic
+" execute pathogen#infect()
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+" 因为 vue 的各种template会报错，暂时先不用
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+" npm install eslint --global
+" let g:syntastic_javascript_checkers=['eslint']
+
+
+" sekel/vim-vue-syntastic
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_vue_checkers = ['eslint']
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+    let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+    let g:syntastic_javascript_eslint_exec = local_eslint
+    let g:syntastic_vue_eslint_exec = local_eslint
+endif
+
+let g:indentLine_color_term = 239
+let g:indentLine_char = 'c'
